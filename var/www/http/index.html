@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <p id="loc"></p>
+
+
+        <script type="text/javascript">
+            var a = document.getElementById("loc");
+
+                function jsonpCallback(data) { 
+              a.innerHTML = "Welcome, user from " + data.country + 
+                              ", your IP is " + data.query; 
+              }
+        </script>
+        <script src="http://ip-api.com/json?callback=jsonpCallback"
+                     type="text/javascript"></script>
+
+
+    </body>
+</html>

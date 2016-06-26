@@ -44,6 +44,7 @@ Follow instructions from www.startssl.com to verify domain name and create CSR w
 openssl req -newkey rsa:2048 -keyout demo.swizzle.key -out demo.swizzle.csr
 ```
 3 Use text from .csr file to create and download certificate according to instructions from startssl.com
+
 4 Copy certificate files to correct folder
 ```
 mkdir /etc/httpd/ssl/

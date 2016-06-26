@@ -1,5 +1,4 @@
 <html>
-<!-- Partly adapted from http://stackoverflow.com/questions/3489460/how-to-get-visitors-location-i-e-country-using-javascript-geolocation -->
     <body>
         <p id="loc"></p>
 
@@ -8,11 +7,11 @@
             var a = document.getElementById("loc");
 
                 function jsonpCallback(data) { 
-              a.innerHTML = "Welcome, user from " + data.country + 
-                              ", your IP is " + data.query; 
+              a.innerHTML = "Welcome, user from " + data.countryName + 
+                              ", your IP is " + data.ipAddress; 
               }
         </script>
-        <script src="http://ip-api.com/json?callback=jsonpCallback"
+        <script src="https://api.ipinfodb.com/v3/ip-country/?key=75a5f7930ba080ec6c46a9684211352a442a92e55e0e084f4ca81f76cf34aaae&format=json&callback=jsonpCallback"
                      type="text/javascript"></script>
 
 

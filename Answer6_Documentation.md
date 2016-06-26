@@ -28,5 +28,13 @@ dnf install mod_ssl
 
 **CONFIGURATION:**
 
+1 Setting permanent redirect from HTTP to HTTPS
+```
+Add the following text to file */etc/httpd/conf/http.conf*
 
-
+<VirtualHost *:80>
+   ServerName demo.swizzle.ch:80
+   Redirect permanent / https://demo.swizzle.ch/
+</VirtualHost>
+```
+2 

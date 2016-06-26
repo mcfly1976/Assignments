@@ -1,10 +1,9 @@
-************
-* ANSWER 6 *
-************
 
-HOW-TO INSTALL AND CONFIGURE APACHE SERVER ON FEDORA LINUX
+# ANSWER 6
 
-INSTALLATON OF APACHE SERVER:
+## HOW-TO INSTALL AND CONFIGURE APACHE SERVER ON FEDORA LINUX
+
+**INSTALLATON OF APACHE SERVER:**
 
 1.	Update available packages
 	dnf update
@@ -17,7 +16,7 @@ INSTALLATON OF APACHE SERVER:
 5. 	Install SSL support for Apache server
 	dnf install mod_ssl
 
-CONFIGURATION:
+**CONFIGURATION:**
 
 
 

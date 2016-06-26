@@ -37,9 +37,10 @@ Add the following text to file /etc/httpd/conf/http.conf
    Redirect permanent / https://demo.swizzle.ch/
 </VirtualHost>
 ```
-2 Create CSR für wwww.startssl.com
+2 Create CSR to use with www.startssl.com
 ```
-Follow instructions from www.startssl.com to verify domain name and create CSR with following command
+Follow instructions from www.startssl.com to verify domain name and create CSR with following command:
+
 openssl req -newkey rsa:2048 -keyout demo.swizzle.key -out demo.swizzle.csr
 ```
 3 Use text from .csr file to create and download certificate according to instructions from startssl.com
@@ -52,7 +53,7 @@ cp pathtofile/1_root_bundle.crt etc/httpd/ssl/
 ```
 5 Configure ssl.conf to use the correct certificates
 ```
-Add or change the following text to file /etc/httpd/conf.d/ssl.conf
+Add or change the following text to file /etc/httpd/conf.d/ssl.conf:
 
 <VirtualHost _default_:443>
 

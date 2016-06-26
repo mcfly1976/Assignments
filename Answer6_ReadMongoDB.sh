@@ -22,14 +22,14 @@ while [  $COUNTER -lt $MongoDBObjects ]; do
 	MongoID=$(mongo $MongoDBName --eval "db.$MongoDBCollection.distinct( \"$COUNTER.id\" )" | sed -e 's/.*\[\(.*\)\].*/\1/' | tr -d " " | sed -n 3p)
 
 	# Write the information to a temporary file
-	echo -e "$MongoID $MongoIP" >> $TempFile
+	echo "$MongoID $MongoIP" >> $TempFile
 
 	# Increase counter 
 	let COUNTER=COUNTER+1 
 done
 
 # Sort the file by IP address
-cat $TempFile | awk '{print $2 " % " $0}' | sort -t. -n -k1,1 -k2,2 -k3,3 -k4,4 | sed 's/[^%]*% //' | tr ' ' '\t' > $SortedFil3e
+cat $TempFile | awk '{print $2 " % " $0}' | sort -t. -n -k1,1 -k2,2 -k3,3 -k4,4 | sed 's/[^%]*% //' | tr ' ' '\t' > $SortedFile
 
 # Remove temporary file
 rm $TempFile

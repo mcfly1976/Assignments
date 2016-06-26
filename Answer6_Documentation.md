@@ -26,7 +26,7 @@ systemctl start httpd.service
 dnf install mod_ssl
 ```
 
-**CONFIGURATION:**
+**CONFIGURATION OF APACHE SERVER:**
 
 1 Setting permanent redirect from HTTP to HTTPS
 ```

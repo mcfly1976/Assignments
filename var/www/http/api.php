@@ -32,12 +32,8 @@ for ($i=0;$i<count($columns);$i++) {
 switch ($method) {
   case 'GET':
     $sql = "select * from `$table`"; break;
-  case 'PUT':
-    $sql = "update `$table` set $set where id=$key"; break;
   case 'POST':
     $sql = "insert into `$table` set $set"; break;
-  case 'DELETE':
-    $sql = "delete `$table` where id=$key"; break;
 }
  
 // excecute SQL statement
